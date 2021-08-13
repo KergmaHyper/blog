@@ -4,7 +4,6 @@ mkdir tempdir/templates
 mkdir tempdir/static
 
 cp app.py tempdir/.
-cp blog.db tempdir/.
 cp -r templates/* tempdir/templates/.
 cp -r static/* tempdir/static/.
 
@@ -20,6 +19,6 @@ echo "CMD python3 /home/myapp_blog/app.py" >> tempdir/Dockerfile
 
 cd tempdir
 docker build -t appblog .
-docker run -t -d -p 6060:6060 --name blogrunning appblog
+docker run -t -d --rm -p 6060:6060 --name blogrunning appblog
 docker ps -a
 
