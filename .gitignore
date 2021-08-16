@@ -5,4 +5,5 @@ include/
 Lib/
 Scripts/
 __pycache__/
+tempdir/
 *.cfg
